@@ -27,13 +27,14 @@ class Details {
         await this.PurchaseBtn.click();
     }
     async clickCart()
-{
+{      
     await this.cart.click();
+    
 } 
 async placeOrder()
 {
     await this.placeodr.click();
-    await this.orderModal.waitFor({ state: "visible" });
+    //await this.orderModal.waitFor({ state: "visible" });
 }  
 
 }

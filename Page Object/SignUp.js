@@ -16,12 +16,12 @@ class SignUp
         {           
             await this.page.goto("https://www.demoblaze.com/");
         }
-        async SignUp(userName, Password)
+        async SignUp(username, password)
         {
             
             await this.SignupHome.click();
-            await this.username.fill(userName);
-            await this.password.fill(Password);
+            await this.username.fill(username);
+            await this.password.fill(password);
             await this.SignUpBtn.click();                        
         }
         async closeSignUp(userName, Password)
