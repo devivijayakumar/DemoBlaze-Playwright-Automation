@@ -23,6 +23,7 @@ class Cart
     async loginUser(username, password)
     {
         await this.loginHome.click();
+        await this.page.locator("#logInModal").waitFor({ state: "visible" });
         await this.userName.fill(username);
         await this.passWord.fill(password);
         await this.loginBtn.click();
@@ -30,6 +31,7 @@ class Cart
     async addProductToCart()
     {
         await this.product.click();
+        await this.addToCartBtn.waitFor({ state: "visible" });
         await this.addToCartBtn.click();
     }
     
@@ -53,12 +55,14 @@ async addPhoneToCart()
     {
         await this.phonesectn.click();
         await this.phone.click();
+        await this.addToCartBtn.waitFor({ state: "visible" });
         await this.addToCartBtn.click();
     }
 async addMonitorToCart()
 {
     await this.monitorsectn.click();
     await this.monitor.click();
+    await this.addToCartBtn.waitFor({ state: "visible" });
     await this.addToCartBtn.click();
 }
 

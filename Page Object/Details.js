@@ -34,7 +34,7 @@ class Details {
 async placeOrder()
 {
     await this.placeodr.click();
-    //await this.orderModal.waitFor({ state: "visible" });
+    await this.orderModal.waitFor({ state: "visible" });
 }  
 
 }

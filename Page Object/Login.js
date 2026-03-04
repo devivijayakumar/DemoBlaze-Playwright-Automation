@@ -8,7 +8,7 @@ class Login
         //page.getByLabel('Username:');
         this.passWord= page.locator("#loginpassword")
         //page.getByLabel('Password:');
-        this.loginBtn= page.getByRole("button", { name: "Log in" });
+        this.loginBtn = page.locator("#logInModal").getByRole("button", { name: "Log in" });
         this.loginModal = page.locator("#logInModal");
 
     }

@@ -16,6 +16,7 @@ class Logout
     async loginUser(username, password)
     {
         await this.loginHome.click();
+        await this.page.locator("#logInModal").waitFor({ state: "visible" });
         await this.userName.fill(username);
         await this.passWord.fill(password);
         await this.loginBtn.click();
